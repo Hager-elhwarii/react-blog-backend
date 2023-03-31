@@ -22,7 +22,7 @@ postRouter.get("/:id", getPost);
 postRouter.post(
   "/",
   protect,
-  validatePost,
+  // validatePost,
   uploadSingleImage("file"),
   createPost
 );
