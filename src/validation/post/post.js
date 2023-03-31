@@ -10,7 +10,6 @@ const postSchema = joi.object({
 
 const validatePost = async (req, res, next) => {
   console.log("in validate");
-  console.log({ body: req.body });
   try {
     await postSchema.validateAsync(req.body);
     next();
