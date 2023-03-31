@@ -35,6 +35,8 @@ postRouter.patch(
   updatePost
 );
 
-postRouter.delete("/", protect, deletePost);
+postRouter.delete("/",
+
+deletePost);
 
 module.exports = postRouter;
