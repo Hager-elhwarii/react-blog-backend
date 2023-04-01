@@ -21,20 +21,12 @@ app.use(
   })
 );
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 app.use(morgan("dev"));
-
-app.use(function (req, res, next) {
-  res.header(
-    "Access-Control-Allow-Origin",
-    "https://slice-of-sin-react-blog.vercel.app"
-  );
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
-});
 
 app.use("/v1/auth", authRouter);
 app.use("/v1/user", userRouter);
