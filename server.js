@@ -26,6 +26,7 @@ app.use(
     origin: "*",
   })
 );
+
 app.use(morgan("dev"));
 
 app.use("/v1/auth", authRouter);
