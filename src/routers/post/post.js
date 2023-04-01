@@ -30,13 +30,11 @@ postRouter.post(
 postRouter.patch(
   "/:id",
   protect,
-  validatePost,
+  // validatePost,
   uploadSingleImage("file"),
   updatePost
 );
 
-postRouter.delete("/",
-
-deletePost);
+postRouter.delete("/", deletePost);
 
 module.exports = postRouter;
